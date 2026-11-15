@@ -78,7 +78,7 @@ Let $`\tau`$ bound the operator-norm approximation error of all coherent stages 
 For an ideal successful subnormalized output $`A`$ of trace $`p_b`$ and the corresponding synthesized output $`\widetilde A`$, conservative bounds are
 
 ```math
-\|A-\widetilde A\|_1\le2\tau,
+\lVert A-\widetilde A\rVert_1\le2\tau,
 \qquad
 |p_b-\mathrm{Tr}\widetilde A|\le2\tau.
 ```

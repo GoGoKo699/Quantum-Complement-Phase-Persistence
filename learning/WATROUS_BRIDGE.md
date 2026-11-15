@@ -95,7 +95,7 @@ Here permutation-invariant vectors and permutation-invariant density operators s
 This project defines trace distance with the factor
 
 ```math
-D(\rho,\sigma)=\frac12\|\rho-\sigma\|_1.
+D(\rho,\sigma)=\frac12\lVert \rho-\sigma\rVert_1.
 ```
 
 The measurement comparison in §3.1.1 implies that, for any effect $`0\le E\le I`$,

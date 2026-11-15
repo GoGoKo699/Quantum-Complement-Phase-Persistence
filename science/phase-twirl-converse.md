@@ -7,7 +7,7 @@ The two inherited ideas are phase averaging in the symmetric occupation basis an
 Throughout, $`N=2M`$, $`|S|=M`$, the integer $`q\ge2`$ is fixed, and phase tables persist for exactly $`B`$ source calls as specified in the [model](model.md). All trace distances use
 
 ```math
-D(\rho,\sigma)=\frac12\|\rho-\sigma\|_1.
+D(\rho,\sigma)=\frac12\lVert \rho-\sigma\rVert_1.
 ```
 
 ## 1. One block in the occupation basis
@@ -146,7 +146,7 @@ The diagonal entries in (1) and (2) are both $`p_n`$, which proves this trace st
 ```math
 \begin{aligned}
 D\!\left(\Omega_{q,S}^{(t)},\Gamma_S^{(t)}\right)
-&=\frac12\|A_{S,t}-C_{S,t}\|_1\\
+&=\frac12\lVert A_{S,t}-C_{S,t}\rVert_1\\
 &\le\frac12
 \left(\mathrm{Tr}A_{S,t}
 +\mathrm{Tr}C_{S,t}\right)\\
