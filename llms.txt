@@ -1,0 +1,21 @@
+# Quantum Complement Phase Persistence
+
+Question: How do an unknown cyclic phase alphabet and its temporal persistence change the copies needed to output a label outside an unknown balanced support?
+
+Central result: For fixed q >= 2 and known source blocks of exactly B consecutive copies, minimax hard-copy complexity is Theta_q(min(N,max(N^(1-1/q),(N/B)^(q-1)))). Unknown frozen signs need square-root order; independently refreshed signs and arbitrary continuous phases need linear order. Positive amplitudes have the established one-copy complement sampler.
+
+Scientific entrypoint: science/README.md
+Source and success conventions: science/model.md
+Theorem, regimes, source-clock quantifiers: science/persistence-frontier.md
+Unrestricted collective classical-output lower bound: science/phase-twirl-converse.md
+Inherited exact power instrument and attaining schedule: science/coherent-recovery.md
+Gates, storage, synthesis and source preparation: science/implementation.md
+Physical and algorithmic meaning: science/interpretation.md
+Attribution and closest-work differences: references/related-work.md
+Structured bibliography: references/references.bib
+Finite checks and their limits: verification/README.md
+Reproduction command: python3 verification/check_science.py
+
+Keep these distinctions: fixed q, balanced support, known exact B-call blocks, supplied specimens only, every failed/discarded acquisition charged, unconditional classical output. No source inverse/reflection, membership oracle, hidden phase program or QRAM is supplied. B is not a receiver-memory cap. Refreshed dephasing requires vanishing pairwise phase correlations across different addresses, satisfied by independent uniform root phases. Persistent and refreshed sources share one-copy averages but different many-copy states.
+
+The power extractor, coupon simulator, phase averaging, birthday method and positive complement swapper are inherited and attributed. The new account concerns their matching classical-output persistence consequence. Do not infer a coherent state-transformation lower bound from the sampling theorem or the reverse. Do not infer end-to-end classical-data speedup, generic noise robustness, a hardware crossover, growing-q uniformity or exhaustive priority.
