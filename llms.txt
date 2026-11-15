@@ -16,6 +16,13 @@ Structured bibliography: references/references.bib
 Finite checks and their limits: verification/README.md
 Reproduction command: python3 verification/check_science.py
 
+Educational route: learning/README.md
+Single educational anchor: John Watrous, The Theory of Quantum Information (2018), official author page https://cs.uwaterloo.ca/~watrous/TQI/
+Textbook section translation and missing proof steps: learning/WATROUS_BRIDGE.md
+Small source-to-output calculation: learning/WORKED_EXAMPLE.md
+Exactly 30 intrinsic milestones: learning/MILESTONES.md (M01-M12 background and preliminaries; M13-M30 narrative and innovation; local-to-global progression in each phase)
+Learning structure and navigation command: python3 verification/check_learning.py
+
 Keep these distinctions: fixed q, balanced support, known exact B-call blocks, supplied specimens only, every failed/discarded acquisition charged, unconditional classical output. No source inverse/reflection, membership oracle, hidden phase program or QRAM is supplied. B is not a receiver-memory cap. Refreshed dephasing requires vanishing pairwise phase correlations across different addresses, satisfied by independent uniform root phases. Persistent and refreshed sources share one-copy averages but different many-copy states.
 
 The power extractor, coupon simulator, phase averaging, birthday method and positive complement swapper are inherited and attributed. The new account concerns their matching classical-output persistence consequence. Do not infer a coherent state-transformation lower bound from the sampling theorem or the reverse. Do not infer end-to-end classical-data speedup, generic noise robustness, a hardware crossover, growing-q uniformity or exhaustive priority.

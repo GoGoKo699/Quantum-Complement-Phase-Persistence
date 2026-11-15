@@ -22,3 +22,17 @@ Combinatorial comparisons use exact rational arithmetic. State vectors, phase av
 The source clock tested here keeps each phase pattern for exactly the specified number of consecutive source calls and exposes the block boundaries. Discarded boundary tails count as source calls. This is different from an unspecified upper bound on persistence.
 
 These checks support the calculations at the tested sizes. The scientific proofs establish the general resource laws; the program does not prove asymptotic optimality, independently establish novelty, test every joint quantum protocol, or implement the complete symmetrization circuit on hardware.
+
+## Learning-route structure
+
+```bash
+python3 verification/check_learning.py
+```
+
+This second standard-library check verifies stable milestone identifiers M01–M30, the partition of 12 background and 18 narrative milestones, six required fields, earlier-only dependencies including ID ranges, the selected Watrous 2018 anchor identity, and local retrieval links and heading fragments from the README, LLM guide and learning files. It also reports a limited qualifier-word inventory and rejects explicit private coaching or authorization markers. These are structural aids: a separate reading must check the teaching, actual book pointers, scientific qualifiers and rendered mathematics.
+
+## Hosted presentation checks
+
+The same-repository pull-request workflow in `.github/workflows/hosted-math.yml` uses `contents: read`, checks out the exact proposed commit without persisted credentials, and visits its public GitHub Markdown pages anonymously. The unchanged helpers in `verification/hosted_math/` first probe the README and then compare every tracked Markdown page at widths 1440 and 760. They record source hashes, accessible mathematical structure, display geometry, HTML and screenshots.
+
+A passing report supports source-to-host agreement at the recorded revision and time. It is separate from visual inspection of the captures and from mathematical or pedagogical review. A green job alone is not a proof of correctness. Workflow artifacts have limited retention and should not be treated as permanent scientific preservation.
