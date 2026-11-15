@@ -59,15 +59,20 @@ Start with the [connected scientific route](science/README.md), or go directly t
 
 [llms.txt](llms.txt) maps theorem, story and reproduction requests to those files.
 
+## Learn the argument
+
+The [learning route](learning/README.md) uses John Watrous's *The Theory of Quantum Information* (2018) as its educational anchor. A [section-by-section bridge](learning/WATROUS_BRIDGE.md) and [four-label worked example](learning/WORKED_EXAMPLE.md) lead into [30 intrinsic milestones](learning/MILESTONES.md): 12 on background and preliminaries, followed by 18 on the theorem, matching proofs, costs and interpretation. The route builds from local calculations to the complete scientific claim.
+
 ## Reproduce the finite checks
 
 With Python 3.10 or later, no additional packages are needed:
 
 ~~~bash
 python3 verification/check_science.py
+python3 verification/check_learning.py
 ~~~
 
-The suite independently checks phase ensembles, occupation blocks, Kraus admissibility and factorization, exact batch probabilities, classical posteriors, charged source-clock schedules and phase-cell diffusion. The [verification guide](verification/README.md) gives its finite scope. These checks support the derivations; they are not an asymptotic proof, hardware experiment or priority certificate.
+The science suite independently checks phase ensembles, occupation blocks, Kraus admissibility and factorization, exact batch probabilities, classical posteriors, charged source-clock schedules and phase-cell diffusion. The learning checker checks the map's structure and navigation. The [verification guide](verification/README.md) gives their finite scope. These checks support the derivations; they are not an asymptotic proof, hardware experiment or priority certificate.
 
 ## Scope and costs
 

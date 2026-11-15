@@ -7,7 +7,7 @@ The two inherited ideas are phase averaging in the symmetric occupation basis an
 Throughout, $`N=2M`$, $`|S|=M`$, the integer $`q\ge2`$ is fixed, and phase tables persist for exactly $`B`$ source calls as specified in the [model](model.md). All trace distances use
 
 ```math
-D(\rho,\sigma)=\frac12\|\rho-\sigma\|_1.
+D(\rho,\sigma)=\frac12\lVert \rho-\sigma\rVert_1.
 ```
 
 ## 1. One block in the occupation basis
@@ -70,8 +70,9 @@ n_x\equiv m_x\pmod q\;\forall x}}
 \sqrt{p_np_m}\,
 |n\rangle_{\mathrm{sym}}
 \langle m|_{\mathrm{sym}}.
-\tag{1}
 ```
+
+Equation (1).
 
 By comparison, independent uniform continuous phases at each address give
 
@@ -81,8 +82,9 @@ By comparison, independent uniform continuous phases at each address give
 \sum_n p_n
 |n\rangle_{\mathrm{sym}}
 \langle n|_{\mathrm{sym}}.
-\tag{2}
 ```
+
+Equation (2).
 
 The phase vector is drawn once for the whole block in both equations. Equation (2) is generally not diagonal in the ordered computational basis: permutations of the same histogram remain coherent.
 
@@ -93,17 +95,17 @@ Call an occupation vector good when every label occurs fewer than $`q`$ times. L
 ```math
 \Pi_{\mathrm{good}}
 =
-\sum_{\max_x n_x<q}
+\sum_{\max_x n_x\lt q}
 |n\rangle_{\mathrm{sym}}
 \langle n|_{\mathrm{sym}},
 \qquad
 \Pi_{\mathrm{bad}}=I_{\mathrm{sym}}-\Pi_{\mathrm{good}}.
 ```
 
-**Lemma 1 — uniqueness below a $`q`$-fold repetition.**  
+**Lemma 1 — uniqueness below a $`q`$-fold repetition.**
 If $`n`$ is good, $`m`$ has the same total occupation, and $`m_x\equiv n_x\pmod q`$ for all $`x`$, then $`m=n`$.
 
-**Proof.** Write $`m_x=n_x+qk_x`$ with integers $`k_x`$. Since $`0\le n_x<q`$ and $`m_x\ge0`$, a negative $`k_x`$ is impossible. Thus all $`k_x\ge0`$. Equality of the total occupations gives $`q\sum_xk_x=0`$, so every $`k_x=0`$. $`\square`$
+**Proof.** Write $`m_x=n_x+qk_x`$ with integers $`k_x`$. Since $`0\le n_x\lt q`$ and $`m_x\ge0`$, a negative $`k_x`$ is impossible. Thus all $`k_x\ge0`$. Equality of the total occupations gives $`q\sum_xk_x=0`$, so every $`k_x=0`$. $`\square`$
 
 The lemma has two consequences. First, the good-good blocks of (1) and (2) are identical. Second, the root-phase state has no good-bad cross terms: a good occupation cannot be congruent to a distinct bad occupation with the same total.
 
@@ -116,15 +118,16 @@ Therefore both states have the decomposition
 \Gamma_S^{(t)}
 &=G_{S,t}+C_{S,t},
 \end{aligned}
-\tag{3}
 ```
+
+Equation (3).
 
 where all three operators are positive, $`G_{S,t}`$ is supported on the good subspace, and $`A_{S,t},C_{S,t}`$ are supported on the bad subspace. Their common residual trace is
 
 ```math
-\operatorname{Tr}A_{S,t}
+\mathrm{Tr}A_{S,t}
 =
-\operatorname{Tr}C_{S,t}
+\mathrm{Tr}C_{S,t}
 =
 P_q(t;M),
 ```
@@ -143,14 +146,15 @@ The diagonal entries in (1) and (2) are both $`p_n`$, which proves this trace st
 ```math
 \begin{aligned}
 D\!\left(\Omega_{q,S}^{(t)},\Gamma_S^{(t)}\right)
-&=\frac12\|A_{S,t}-C_{S,t}\|_1\\
+&=\frac12\lVert A_{S,t}-C_{S,t}\rVert_1\\
 &\le\frac12
-\left(\operatorname{Tr}A_{S,t}
-+\operatorname{Tr}C_{S,t}\right)\\
+\left(\mathrm{Tr}A_{S,t}
++\mathrm{Tr}C_{S,t}\right)\\
 &=P_q(t;M).
 \end{aligned}
-\tag{4}
 ```
+
+Equation (4).
 
 This argument does not discard a postselected bad event. It compares the full normalized states.
 
@@ -160,10 +164,11 @@ For any chosen $`q`$ sample positions, the probability that all their labels agr
 P_q(t;M)
 \le
 \min\!\left\{1,\binom tq M^{1-q}\right\},
-\tag{5}
 ```
 
-where $`\binom tq=0`$ for $`t<q`$.
+Equation (5).
+
+where $`\binom tq=0`$ for $`t\lt q`$.
 
 Equations (4)–(5) show why the relevant phase order is $`q`$. Until a label can occur $`q`$ times, the finite-phase source carries exactly the same information as the continuous-phase source. The distinction is not controlled by a one-copy coherence parameter.
 
@@ -219,8 +224,9 @@ D\!\left(
 \frac{1}{M^{q-1}}
 \sum_{j=1}^{J}\binom{t_j}{q}
 \right\}.
-\tag{6}
 ```
+
+Equation (6).
 
 The reference state $`\Gamma_S^{\mathbf t}`$ is generated from exactly $`T`$ ordinary samples, grouped according to the known block boundaries. The hidden support is the same in all blocks, and the simulator preserves that dependence through the ordinary sample distribution.
 
@@ -234,8 +240,9 @@ Two useful estimates are
 \frac{1}{q!}\sum_j t_j^q
 \le
 \frac{T^q}{q!},
-\tag{7}
 ```
+
+Equation (7).
 
 and, because $`t_j\le B`$,
 
@@ -245,12 +252,13 @@ and, because $`t_j\le B`$,
 \frac{1}{q!}\sum_j t_j B^{q-1}
 =
 \frac{T B^{q-1}}{q!}.
-\tag{8}
 ```
+
+Equation (8).
 
 The first estimate retains the globally frozen collision scale. The second charges the finite number of coherent repetitions available before a phase refresh.
 
-If $`B<q`$, every observed block has fewer than $`q`$ copies, so each term in (6) vanishes exactly. In that regime the entire phase-averaged root source is simulable from ordinary samples, for every total budget.
+If $`B\lt q`$, every observed block has fewer than $`q`$ copies, so each term in (6) vanishes exactly. In that regime the entire phase-averaged root source is simulable from ordinary samples, for every total budget.
 
 ## 5. The ordinary-sample posterior bound
 
@@ -266,10 +274,11 @@ A label in $`D`$ is certainly in $`S`$. For every label $`y\notin D`$,
 \frac{N-M}{N-d}
 =
 \frac{M}{N-d}.
-\tag{9}
 ```
 
-Any randomized decision, including one produced by arbitrary quantum processing of that classical transcript, is a mixture of possible output labels. It cannot exceed the largest posterior success probability. Since $`d\le T`$, for $`T<N`$ the ordinary-sample success is at most
+Equation (9).
+
+Any randomized decision, including one produced by arbitrary quantum processing of that classical transcript, is a mixture of possible output labels. It cannot exceed the largest posterior success probability. Since $`d\le T`$, for $`T\lt N`$ the ordinary-sample success is at most
 
 ```math
 C_T
@@ -277,8 +286,9 @@ C_T
 \min\!\left\{
 1,\frac{M}{N-T}
 \right\}.
-\tag{10}
 ```
+
+Equation (10).
 
 This is the established complement-sampling posterior argument. The bound is deliberately simple; repeated samples only make it looser.
 
@@ -286,8 +296,8 @@ This is the established complement-sampling posterior argument. The bound is del
 
 Combining (6) and (10), averaging over the uniform support prior, and applying contractivity proves the following statement.
 
-**Theorem 2 — success under a hard acquisition cap.**  
-For $`T<N`$, every receiver using at most $`T`$ specimens satisfies
+**Theorem 2 — success under a hard acquisition cap.**
+For $`T\lt N`$, every receiver using at most $`T`$ specimens satisfies
 
 ```math
 \boxed{
@@ -302,8 +312,9 @@ For $`T<N`$, every receiver using at most $`T`$ specimens satisfies
 \sum_j\binom{t_j}{q}
 \right\}.
 }
-\tag{11}
 ```
+
+Equation (11).
 
 The right side may additionally be capped by one. The probability on the left averages the initial support and phase tables under the stated prior, together with the receiver's own randomness and measurements.
 
@@ -358,8 +369,9 @@ There is therefore a positive constant depending only on fixed $`q`$ for which
 
 ```math
 T\ge c_q F_q(N,B).
-\tag{12}
 ```
+
+Equation (12).
 
 Replacing $`M=N/2`$ by $`N`$ inside the powers changes only $`q`$-dependent constants. Thus
 
@@ -383,7 +395,7 @@ The [coherent-recovery construction](coherent-recovery.md) gives the matching up
 
 For continuous independent uniform phases within each source block, the received state is already $`\Gamma_S^{\mathbf t}`$. There is no comparison error. Equation (10) alone implies $`T\ge N/4`$ for average success $`2/3`$. Ordinary basis measurement and an unseen-label rule use $`O(N)`$ samples, so the order is $`\Theta(N)`$ for every $`B`$.
 
-For independently refreshed root phases, $`B=1<q`$ and the finite-phase comparison is also exact. In fact each averaged register is diagonal, so the source is directly equivalent to ordinary samples.
+For independently refreshed root phases, $`B=1\lt q`$ and the finite-phase comparison is also exact. In fact each averaged register is diagonal, so the source is directly equivalent to ordinary samples.
 
 These arguments do not assert that a single realized pure continuous-phase state is mixed. They concern the information available when the hidden table is unknown and drawn according to the lower-bound prior.
 
@@ -394,4 +406,3 @@ The occupation-residue method is inherited. Binary-phase subset-state moment com
 The lower bound established here is for **one complement label**, not for coherent amplitude powering, tomography or identification of the support. The finite phase alphabet and the known persistence length jointly determine when this classical-output task escapes the ordinary-sample posterior bound. That conclusion requires the receiving task and output payoff in Sections 5–7; it does not follow from a state-transformation lower bound alone.
 
 [Source model](model.md) · [Frontier](persistence-frontier.md) · [Attaining recovery](coherent-recovery.md)
-

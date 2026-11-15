@@ -34,7 +34,7 @@ Define
 C_q=\frac{(2q-1)!}{(q-1)!}.
 ```
 
-For each residual occupation vector $`z`$ satisfying $`|z|=b-q`$ and $`0\le z_x<q`$, the successful Kraus operator is
+For each residual occupation vector $`z`$ satisfying $`|z|=b-q`$ and $`0\le z_x\lt q`$, the successful Kraus operator is
 
 ```math
 K_z=\sum_{x\in[N]}
@@ -88,7 +88,7 @@ p_q=\frac{q!}{C_qM^{q-1}}.
 To obtain the formula, sum the squared branch norms and use
 
 ```math
-\sum_{\substack{|z|=L\\z_x<q}}
+\sum_{\substack{|z|=L\\z_x\lt q}}
 \frac{L!}{\prod_xz_x!}\prod_x(M^{-1})^{z_x}
 =Q_q^{\mathrm{occ}}(L;M).
 ```
@@ -101,7 +101,7 @@ An ordinary union bound gives
 Q_q^{\mathrm{occ}}(L;M)\ge1-\binom LqM^{1-q},
 ```
 
-where $`\binom Lq=0`$ for $`L<q`$. Oversized batches need not improve success; the schedule below stays within a range where this lower bound is positive.
+where $`\binom Lq=0`$ for $`L\lt q`$. Oversized batches need not improve success; the schedule below stays within a range where this lower bound is positive.
 
 ## From a subset state to a complement label
 
@@ -122,7 +122,7 @@ Measuring the output label therefore gives a uniform element outside $`S`$. This
 
 ## A hard schedule with exact refresh boundaries
 
-The source promises blocks of exactly $`B`$ copies, with known boundaries. If $`B<q`$, use the classical fallback below. Otherwise define the integer
+The source promises blocks of exactly $`B`$ copies, with known boundaries. If $`B\lt q`$, use the classical fallback below. Otherwise define the integer
 
 ```math
 L_* =\max\{L\in\mathbb Z_{\ge0}:(2L)^q\le M^{q-1}\},
@@ -142,7 +142,7 @@ gives the known lower bound
 \le p_b\le\frac{\beta_b}{\xi_q}.
 ```
 
-For a chosen constant $`0<\delta<1`$, choose an integer $`a_\delta\ge1`$ with $`2^{-a_\delta}\le\delta`$ and take
+For a chosen constant $`0\lt \delta\lt 1`$, choose an integer $`a_\delta\ge1`$ with $`2^{-a_\delta}\le\delta`$ and take
 
 ```math
 J=a_\delta\left\lceil\frac1{\beta_b}\right\rceil.
@@ -153,7 +153,7 @@ Only rational and integer arithmetic is needed for the run length. One can take 
 Run at most $`J`$ fresh $`b`$-copy attempts, stopping at the first successful flag. At each source block, pack
 
 ```math
-h=\lfloor B/b\rfloor\ge1,\qquad r=B-hb<b
+h=\lfloor B/b\rfloor\ge1,\qquad r=B-hb\lt b
 ```
 
 attempts. If another block is needed, consume and discard its $`r`$-copy tail before starting the next block. Stop without consuming a final unused tail. Every attempted batch is wholly inside one phase block. The deterministic copy cap is
@@ -161,7 +161,7 @@ attempts. If another block is needed, consume and discard its $`r`$-copy tail be
 ```math
 T_{\mathrm{coh}}
 =Jb+\left\lfloor\frac{J-1}{h}\right\rfloor r
-<2Jb.
+\lt 2Jb.
 ```
 
 This cap counts rejected attempts and discarded copies; there is no additive $`B`$ charge for a large final block. Fresh product copies make the conditional success probability $`p_b`$ after every failure, even when several attempts share one phase table. Thus
@@ -200,11 +200,11 @@ T=O_q\!\left(
 \right).
 ```
 
-This includes $`B<q`$ and all finite $`N\ge2`$; constants may depend on the fixed phase order. No large-support or $`q\le M`$ assumption is needed. The lower bound and its minimax quantifiers are in [the converse](phase-twirl-converse.md).
+This includes $`B\lt q`$ and all finite $`N\ge2`$; constants may depend on the fixed phase order. No large-support or $`q\le M`$ assumption is needed. The lower bound and its minimax quantifiers are in [the converse](phase-twirl-converse.md).
 
 ## Fixed-width phase cells
 
-Suppose instead that the phase on $`x\in S`$ is $`2\pi z_x/q+\delta_x`$, where $`|\delta_x|\le\eta/q`$ and $`0\le\eta<\pi/2`$. The same instrument has exactly the same probability $`p_b`$, and its successful state is
+Suppose instead that the phase on $`x\in S`$ is $`2\pi z_x/q+\delta_x`$, where $`|\delta_x|\le\eta/q`$ and $`0\le\eta\lt \pi/2`$. The same instrument has exactly the same probability $`p_b`$, and its successful state is
 
 ```math
 |\phi\rangle=\frac1{\sqrt M}\sum_{x\in S}e^{iq\delta_x}|x\rangle.
