@@ -13,6 +13,8 @@ Let $`Q_q(N,B)`$ be the minimum hard total-copy budget for unconditional complem
 **Theorem 1 — phase-persistence law.**  
 There are positive constants depending only on fixed $`q`$ such that, uniformly over integers $`B\ge1`$,
 
+**Equation (1).**
+
 ```math
 \boxed{
 Q_q(N,B)
@@ -27,7 +29,6 @@ N^{1-1/q},
 \right\}
 \right).
 }
-\tag{1}
 ```
 
 The statement is asymptotic in $`N`$. The constants also depend on the chosen fixed success threshold if that threshold is changed. Small finite dimensions do not alter the order.
@@ -56,7 +57,9 @@ These are operational scales in one supplied-copy task. They are not claims that
 
 ## 3. Proof route: lower bound
 
-The [phase-twirl converse](phase-twirl-converse.md) proves the following finite bound. For a receiver using at most $`T<N`$ source outputs, with observed phase-block lengths $`t_j`$,
+The [phase-twirl converse](phase-twirl-converse.md) proves the following finite bound. For a receiver using at most $`T\lt N`$ source outputs, with observed phase-block lengths $`t_j`$,
+
+**Equation (2).**
 
 ```math
 \Pr[Y\notin S]
@@ -69,7 +72,6 @@ The [phase-twirl converse](phase-twirl-converse.md) proves the following finite 
 1,\frac{1}{M^{q-1}}
 \sum_j\binom{t_j}{q}
 \right\}.
-\tag{2}
 ```
 
 The probability averages a uniform balanced support and independent uniform root-phase tables. This prior is sufficient for a minimax lower bound.
@@ -78,11 +80,12 @@ The first term is the optimal posterior bound available from ordinary samples. T
 
 Since $`\sum_jt_j=T`$ and $`t_j\le B`$,
 
+**Equation (3).**
+
 ```math
 \sum_j\binom{t_j}{q}
 \le
 \frac{1}{q!}\min\{T^q,T B^{q-1}\}.
-\tag{3}
 ```
 
 For $`T\le N/8`$, the first term of (2) is at most $`4/7`$. Reaching $`2/3`$ success therefore requires constant weight in the second term, forcing both
@@ -103,6 +106,8 @@ The [coherent-recovery account](coherent-recovery.md) uses the exact collective 
 
 For a batch of $`b\ge q`$ identical specimens with uniform magnitudes on $`S`$, its exact success probability is
 
+**Equation (4).**
+
 ```math
 p_b
 =
@@ -110,16 +115,16 @@ p_b
 Q_q^{\mathrm{occ}}(b-q;M),
 \qquad
 C_q=\frac{(2q-1)!}{(q-1)!}.
-\tag{4}
 ```
 
 Here $`(b)_q=b(b-1)\cdots(b-q+1)`$, and $`Q_q^{\mathrm{occ}}(\ell;M)`$ is the probability that no label appears $`q`$ times among $`\ell`$ ordinary uniform draws. This probability notation is distinct from the copy complexity $`Q_q(N,B)`$.
 
 Choose a batch no larger than $`B`$ and no larger, up to a fixed $`q`$-dependent factor, than $`R`$. Then
 
+**Equation (5).**
+
 ```math
 p_b=\Theta_q\!\left(\frac{b^q}{M^{q-1}}\right).
-\tag{5}
 ```
 
 On heralded success, raising the amplitudes to their $`q`$th power cancels every root phase and leaves exactly $`|S\rangle`$. The known diffuser maps it to $`|\bar S\rangle`$. The output label is therefore certainly outside the support on that branch.
@@ -134,7 +139,7 @@ Taking $`b=\Theta_q(\min\{B,R\})`$ when $`B\ge q`$ gives a hard budget of order
 O_q(\max\{R,L\}).
 ```
 
-For $`B<q`$, or whenever this budget exceeds the ordinary-sample cost, use the classical strategy instead. Measure ordinary samples, collect their observed labels, and return a uniformly chosen unseen label. Order $`N`$ copies suffice.
+For $`B\lt q`$, or whenever this budget exceeds the ordinary-sample cost, use the classical strategy instead. Measure ordinary samples, collect their observed labels, and return a uniformly chosen unseen label. Order $`N`$ copies suffice.
 
 Combining these two permitted strategies proves the upper half of (1). A uniform fallback output after all coherent attempts fail makes the total output unconditional. The detailed schedule chooses a success margin before finite synthesis error is allocated.
 
@@ -221,7 +226,7 @@ and every realized pure specimen has the same computational-basis probabilities.
 
 ## 7. Robustness within phase cells
 
-Suppose each phase in a source block lies within $`\eta/q`$ of a $`q`$th root, with fixed $`0\le\eta<\pi/2`$ and
+Suppose each phase in a source block lies within $`\eta/q`$ of a $`q`$th root, with fixed $`0\le\eta\lt \pi/2`$ and
 
 ```math
 \cos^2\eta>\frac23.

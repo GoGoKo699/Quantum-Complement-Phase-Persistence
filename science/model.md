@@ -193,7 +193,7 @@ The discrete phases need not be exact. Fix a known $`\eta\ge0`$ with
 ```math
 s_\eta:=\cos^2\eta>\frac23,
 \qquad
-0\le\eta<\frac{\pi}{2}.
+0\le\eta\lt \frac{\pi}{2}.
 ```
 
 Within each source block, permit

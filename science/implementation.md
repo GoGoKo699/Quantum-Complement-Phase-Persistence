@@ -23,7 +23,7 @@ a_k=\sqrt{\frac{k!}{(k-q)!\,C_q}},
 5. **Cleanup and readout.** Recompute the original records from the output label $`x`$ and the residual list $`z^{\rm list}`$:
 
 ```math
-a=1+\#\{j:z_j^{\rm list}<x\},
+a=1+\#\{j:z_j^{\rm list}\lt x\},
 \qquad
 k=q+\#\{j:z_j^{\rm list}=x\}.
 ```
@@ -80,14 +80,14 @@ For an ideal successful subnormalized output $`A`$ of trace $`p_b`$ and the corr
 ```math
 \|A-\widetilde A\|_1\le2\tau,
 \qquad
-|p_b-\operatorname{Tr}\widetilde A|\le2\tau.
+|p_b-\mathrm{Tr}\widetilde A|\le2\tau.
 ```
 
-Consequently, provided $`2\tau<p_b`$,
+Consequently, provided $`2\tau\lt p_b`$,
 
 ```math
 D\!\left(
-\frac{\widetilde A}{\operatorname{Tr}\widetilde A},
+\frac{\widetilde A}{\mathrm{Tr}\widetilde A},
 \frac A{p_b}\right)
 \le\frac{2\tau}{p_b-2\tau}.
 ```

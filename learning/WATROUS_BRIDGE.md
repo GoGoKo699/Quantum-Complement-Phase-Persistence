@@ -24,7 +24,7 @@ Watrous uses ordinary vectors and their adjoints rather than Dirac notation. The
 | Standard vector $`e_x`$; matrix unit $`E_{x,y}=e_xe_y^*`$ | $`\lvert x\rangle`$; $`\lvert x\rangle\langle y\rvert`$ |
 | Pure state $`uu^*`$ | $`\lvert\psi\rangle\langle\psi\rvert`$ |
 | Identity $`1_{\mathcal X}`$ and adjoint $`A^*`$ | $`I`$ and $`A^\dagger`$ |
-| Measurement effect $`\mu(y)`$ | An effect $`E_y`$, with outcome probability $`\operatorname{Tr}(E_y\rho)`$ |
+| Measurement effect $`\mu(y)`$ | An effect $`E_y`$, with outcome probability $`\mathrm{Tr}(E_y\rho)`$ |
 | $`n`$ tensor factors in Chapter 7; a bag $`\varphi\in\mathrm{Bag}(n,\Sigma)`$ | $`t`$ copies in one block; an occupation vector with entries $`n_x=\varphi(x)`$ |
 
 The last row prevents a useful ambiguity: the book's tensor count $`n`$ is not the universe size $`N`$. In this project $`N=2M`$, the hidden support $`S`$ has size $`M`$, $`q\ge2`$ is a fixed phase order, $`B`$ is the known number of consecutive source calls sharing one table, and $`T`$ is the hard total acquisition budget. An individual block contributes $`t\le B`$ observed copies. The receiver knows these parameters and the basis, but does not know $`S`$ or the phase table.
@@ -81,7 +81,7 @@ The new calculation to perform in this basis is a finite character average:
 
 It follows that a root-phase block retains exactly the occupation coherences with coordinatewise equal residues modulo $`q`$. Continuous independent address phases retain only equal occupations. These two averaging rules are research ingredients applied here; the textbook's symmetric-space framework alone does not establish the persistence law.
 
-If every $`n_x<q`$, no different nonnegative occupation vector of the same total can have those residues. Indeed, writing $`m_x=n_x+qk_x`$ forces every $`k_x\ge0`$, and equal totals force all of them to vanish. Thus the two averaged states have an identical good component. Their remaining weight is bounded by
+If every $`n_x\lt q`$, no different nonnegative occupation vector of the same total can have those residues. Indeed, writing $`m_x=n_x+qk_x`$ forces every $`k_x\ge0`$, and equal totals force all of them to vanish. Thus the two averaged states have an identical good component. Their remaining weight is bounded by
 
 ```math
 \Pr[\text{a label occurs at least }q\text{ times}]
@@ -101,7 +101,7 @@ D(\rho,\sigma)=\frac12\|\rho-\sigma\|_1.
 The measurement comparison in §3.1.1 implies that, for any effect $`0\le E\le I`$,
 
 ```math
-|\operatorname{Tr}(E\rho)-\operatorname{Tr}(E\sigma)|
+|\mathrm{Tr}(E\rho)-\mathrm{Tr}(E\sigma)|
 \le D(\rho,\sigma).
 ```
 

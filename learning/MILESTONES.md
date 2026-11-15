@@ -256,7 +256,7 @@ The chapter files are [Chapter 2](https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf
 
 - **Phase:** Narrative / innovation.
 - **Central question:** Does the recovery advantage survive bounded departures from exact roots?
-- **Understanding target:** Assume $`|\delta_x|\le\eta/q`$, $`0\le\eta<\pi/2`$ and $`\cos^2\eta>2/3`$. Bound the mean residual phase after powering by the real part of the arc $`[-\eta,\eta]`$. Relate the resulting complement success to that fixed positive margin, and retain exact roots as the lower-bound subfamily.
+- **Understanding target:** Assume $`|\delta_x|\le\eta/q`$, $`0\le\eta\lt \pi/2`$ and $`\cos^2\eta>2/3`$. Bound the mean residual phase after powering by the real part of the arc $`[-\eta,\eta]`$. Relate the resulting complement success to that fixed positive margin, and retain exact roots as the lower-bound subfamily.
 - **Dependencies and story role:** Uses M13, M21, M24 and M26. It shows which robustness statement the theorem actually supports.
 - **Conceptual connection:** A fixed phase promise can preserve a resource order without implying tolerance to arbitrary source noise or within-block drift.
 - **Source pointers:** W2-states, section 2.1.2, pure-state amplitudes; W2-readout, section 2.3.1; [model section 6](../science/model.md); [coherent recovery: fixed-width phase cells](../science/coherent-recovery.md).
